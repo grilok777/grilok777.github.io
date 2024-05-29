@@ -1,4 +1,4 @@
-fetch('https://snake1gamestax.web.app/leaderBoard')
+fetch('/leaderBoard')
   .then(response => response.json())
   .then(users => {
     

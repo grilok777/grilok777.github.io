@@ -85,7 +85,7 @@ function Register() {
         registrationDate: new Date()
     };
 
-    fetch('https://snake1gamestax.web.app/register', {
+    fetch('/register', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(player)

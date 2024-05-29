@@ -53,7 +53,7 @@ const responseSchema = new mongoose.Schema({
 const Response = mongoose.model('Response', responseSchema);
 
 //запит реєстрації
-app.post('https://snake1gamestax.web.app/register', async (req, res) => {
+app.post('/register', async (req, res) => {
   const { email, nickname } = req.body;
   try {
     const existingUserWithEmail = await User.findOne({ email: email });
@@ -76,7 +76,7 @@ app.post('https://snake1gamestax.web.app/register', async (req, res) => {
   }
 });
 //запит авторизації
-app.post('https://snake1gamestax.web.app/login', async (req, res) => {
+app.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email: email });
@@ -95,7 +95,7 @@ app.post('https://snake1gamestax.web.app/login', async (req, res) => {
   }
 });
 //запит повернення топ-5 користувачів з найбільшим рекордом
-app.get('https://snake1gamestax.web.app/leaderBoard', async (req, res) => {
+app.get('/leaderBoard', async (req, res) => {
   try {
     const users = await User.find().sort({ record: -1 }).limit(5);
     res.json(users);
@@ -104,7 +104,7 @@ app.get('https://snake1gamestax.web.app/leaderBoard', async (req, res) => {
   }
 });
 // запит створення нової історії гри користувача
-app.post('https://snake1gamestax.web.app/gameHistory', async (req, res) => {
+app.post('/gameHistory', async (req, res) => {
   const { nickname, date, score, version } = req.body;
   try {
     const gameHistory = new GameHistory({ nickname, date, score, version });
@@ -115,7 +115,7 @@ app.post('https://snake1gamestax.web.app/gameHistory', async (req, res) => {
   }
 });
 // запит повернення всіх історій ігор користувача(за нікнеймом)
-app.get('https://snake1gamestax.web.app/userGames/:nickname', async (req, res) => {
+app.get('/userGames/:nickname', async (req, res) => {
   const { nickname } = req.params;
   try {
     const games = await GameHistory.find({ nickname: nickname }).sort({ date: -1 });
@@ -125,7 +125,7 @@ app.get('https://snake1gamestax.web.app/userGames/:nickname', async (req, res) =
   }
 });
 // запит повернення рекорду гравця
-app.get('https://snake1gamestax.web.app/getUserRecord/:nickname', async (req, res) => {
+app.get('/getUserRecord/:nickname', async (req, res) => {
   const { nickname } = req.params;
   try {
     const user = await User.findOne({ nickname: nickname });
@@ -140,7 +140,7 @@ app.get('https://snake1gamestax.web.app/getUserRecord/:nickname', async (req, re
   }
 });
 //запит оновлення рекорду гравця
-app.post('https://snake1gamestax.web.app/updateUserRecord/:nickname', async (req, res) => {
+app.post('/updateUserRecord/:nickname', async (req, res) => {
   const { nickname } = req.params;
   const { record, version } = req.body;
   try {
@@ -164,7 +164,7 @@ app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 // запит відправлення відгуку
-app.post('https://snake1gamestax.web.app/addResponse', (req, res) => {
+app.post('/addResponse', (req, res) => {
   const { email, text } = req.body; 
 
   const newResponse = new Response({ email, text });

@@ -302,7 +302,7 @@ function gameOver() {
             score: score,
             version: sessionStorage.getItem("version")
         };
-        fetch('https://snake1gamestax.web.app/gameHistory', {
+        fetch('/gameHistory', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(gameHistory)
@@ -311,7 +311,7 @@ function gameOver() {
             .then(data => console.log(data.message))
             .catch(error => console.error('Error:', error));
 
-        fetch(`https://snake1gamestax.web.app/getUserRecord/${sessionStorage.getItem("nickname")}`, {
+        fetch(`/getUserRecord/${sessionStorage.getItem("nickname")}`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         })
@@ -319,7 +319,7 @@ function gameOver() {
             .then(data => {
                 if (score > data.record) {
                     sessionStorage.setItem("record", score);
-                    fetch(`https://snake1gamestax.web.app/updateUserRecord/${sessionStorage.getItem("nickname")}`, {
+                    fetch(`/updateUserRecord/${sessionStorage.getItem("nickname")}`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ record: score, version: sessionStorage.getItem("version") })

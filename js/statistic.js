@@ -5,7 +5,7 @@ document.getElementById("statReg").textContent = new Date(sessionStorage.getItem
 
 let apple = 0;
 
-fetch(`https://snake1gamestax.web.app/userGames/${sessionStorage.getItem("nickname")}`)
+fetch(`/userGames/${sessionStorage.getItem("nickname")}`)
 .then(response => response.json())
 .then(games => {
     document.getElementById("statMatch").textContent = games.length;

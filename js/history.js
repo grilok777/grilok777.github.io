@@ -2,7 +2,7 @@ let currentPage = 0, allGameslength;
 const gamesPerPage = 5;
 
 function fetchGames() {
-  fetch(`https://snake1gamestax.web.app/userGames/${sessionStorage.getItem("nickname")}`)
+  fetch(`/userGames/${sessionStorage.getItem("nickname")}`)
     .then(response => response.json())
     .then(games => {
       for (let i = 0; i < gamesPerPage; i++) {

@@ -18,7 +18,7 @@ function AddResponse() {
         email: tempEmail,
         text: text
     };
-    fetch('https://snake1gamestax.web.app/addResponse', {
+    fetch('/addResponse', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(response)
