@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html en>
+<head>
+    <meta charset="utf-8">
+    <title>Snake Game</title>
+    <link rel="icon" href="./icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="description(not required)">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSNZPC8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <header>
+        <div class="content">
+            <div class="logo-text">
+                <h1>Snake Game</h1>
+            </div>
+
+
+        </div>
+    </header>
+    <div class="register">
+        <div class="menu-content">
+            <div class="menu-box box-left">
+                <a href="index.html">
+                    <div class="reg-btn ">
+                        <p>Назад</p>
+                    </div>
+                </a>
+
+                <a href="" id="supportSrc">
+                    <div class="account-btn reg-btn-orange" id="support">
+                        <img width="40" id="supportImg" src="./img/patreon.png" />
+                        <p>Підтримати</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-box box-right hidden-right" id="no-account">
+                <div class="reg-measure"></div>
+
+                <a href="register.html">
+                    <div class="reg-btn ">
+                        <p>Реєстрація</p>
+                    </div>
+                </a>
+                <a href="login.html">
+                    <div class="reg-btn">
+                        <p>Вхід</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-box box-right account hidden-right" id="account">
+                <div class="reg-measure"></div>
+                <div class="account-image">
+                    <img width="60" id="accountImg" src="./img/icon0.png" />
+                </div>
+                <div class="account-info">
+                    <p id="accountName">No name</p>
+                </div>
+                <div class="account-btn" id="accountExit">
+                    <p>Вихід</p>
+                </div>
+                
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="history-bl">
+        <div class="history-bl-content">
+            <div class="match-bl title leader-bl-gold" id ="reality1">
+                <div class="match-name" >
+                    <div class="account-image account-image-leader" >
+                        <img width="60" id="leaderImg1" src="./img/icon0.png" />
+                        <div class="white-icon bl-icon-yellow bl-icon-blue">
+                            <div class="boarder-icon">
+                                <strong>1</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-tiltle">
+                        <p id="leaderName1">No name</p>
+                    </div>
+
+                </div>
+                <div class="match-bl-right">
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="leaderDate1"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="leaderResult1"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="leaderVersion1"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-bl title leader-bl-silver" id ="reality2">
+                <div class="match-name">
+                    <div class="account-image account-image-leader">
+                        <img width="60" id="leaderImg2" src="./img/icon0.png" />
+                        <div class="white-icon bl-icon-yellow">
+                            <div class="boarder-icon">
+                                <strong>2</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-tiltle">
+                        <p id="leaderName2">No name</p>
+                    </div>
+
+                </div>
+                <div class="match-bl-right">
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="leaderDate2"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="leaderResult2"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="leaderVersion2"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-bl title leader-bl-bronze" id ="reality3">
+                <div class="match-name" >
+                    <div class="account-image account-image-leader" >
+                        <img width="60" id="leaderImg3" src="./img/icon0.png" />
+                        <div class="white-icon bl-icon-yellow bl-icon-purple">
+                            <div class="boarder-icon">
+                                <strong>3</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="match-tiltle">
+                        <p id="leaderName3">No name</p>
+                    </div>
+
+                </div>
+                <div class="match-bl-right">
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="leaderDate3"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="leaderResult3"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="leaderVersion3"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-bl title" id ="reality4">
+                <div class="match-name" >
+                    <div class="account-image account-image-leader">
+                        <img width="60" id="leaderImg4" src="./img/icon0.png" />
+                        <div class="white-icon bl-icon-yellow bl-icon-green">
+                            <div class="boarder-icon">
+                                <strong>4</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-tiltle">
+                        <p id="leaderName4">No name</p>
+                    </div>
+
+                </div>
+                <div class="match-bl-right" >
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="leaderDate4"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="leaderResult4"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="leaderVersion4"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="match-bl title" id ="reality5">
+                <div class="match-name" >
+                    <div class="account-image account-image-leader">
+                        <img width="60" id="leaderImg5" src="./img/icon0.png" />
+                        <div class="white-icon bl-icon-yellow bl-icon-red">
+                            <div class="boarder-icon">
+                                <strong>5</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="match-tiltle">
+                        <p id="leaderName5">No name</p>
+                    </div>
+
+                </div>
+                <div class="match-bl-right" >
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="leaderDate5"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="leaderResult5"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="leaderVersion5"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="leaderboard-footer">
+        <div class="register-content ">
+
+            <div class="reg-box reg-box-right">
+                <div class="version">
+                    <p id="appVersion"></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!--script section-->
+    <script type="text/javascript" async="" src="./js/leaderBoard.js"></script>
+    <script type="text/javascript" async="" src="./js/account.js"></script>
+    <script type="text/javascript" async="" src="./js/version.js"></script>
+    <script type="text/javascript" async="" src="./js/random.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+@media screen and (min-width: 350px) {
+
+    .box-right {
+        display: none;
+    }
+    .reg-btn-orange {
+        display: none;
+    }
+    @media screen and (min-width: 690px) {
+        .menu-content {
+            justify-content: space-between;
+        }
+
+        .menu-box {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box-right {
+            display: flex;
+        }
+    }
+
+
+}
+@media screen and (min-width: 895px) {
+    .reg-btn-orange {
+        display: flex;
+        height:60px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .box-right {
+        display: block;
+    }
+
+    .menu-box {
+        display: flex;
+        flex-direction: row;
+    }
+}

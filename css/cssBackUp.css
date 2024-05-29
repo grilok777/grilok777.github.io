@@ -1,0 +1,427 @@
+@media screen and (min-width: 350px) {
+    header {
+        height: 80px;
+    }
+
+        header h1 {
+            color: white;
+            font-family: Rubik;
+            font-weight: 600;
+            font-size: 58px;
+            letter-spacing: -0.025em;
+        }
+
+    .reg-measure, .reg-measure-2 {
+        display: none;
+    }
+
+    .reg-btn {
+        width: 156px;
+        height: 53px;
+        font-size: 26px;
+    }
+
+    .register {
+        height: 80px;
+    }
+
+    .options-content {
+        flex-direction: column;
+    }
+
+    .bl-btn {
+        width: 100%;
+    }
+
+    html, body {
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    body {
+        position: relative
+    }
+
+    footer {
+        position: inherit;
+    }
+
+    .menu-content {
+        justify-content: center;
+    }
+
+    .instruction-content {
+        width: 94%;
+    }
+
+
+
+    .game-container canvas {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 100%;
+    }
+
+    .end-content {
+        width: 90%;
+    }
+
+        .end-content .reg-btn {
+            font-size: 20px;
+        }
+
+    .regSection {
+        margin-bottom: 10px;
+    }
+
+    .regSection-content {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .register-field {
+        padding-left: 0;
+    }
+
+        .register-field input[type="text"],
+        .register-field input[type="password"] {
+            width: 84%;
+            height: 30px;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 20px;
+            color: #3d3d3d
+        }
+
+    .fixed-footer {
+        position: fixed;
+    }
+
+    .hidden-right {
+        display: none;
+    }
+
+    .match-tiltle {
+        font-size: 26px;
+    }
+
+    .match-bl {
+        width: 94%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .match-bl-right {
+        justify-content: center;
+    }
+
+        .match-bl-right > *, .match-bl-left > * {
+            padding: 0px 10px 0px 10px;
+        }
+
+    .small-title {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    .history-btn-content {
+        margin-bottom: 10px;
+    }
+
+    .desc-bl-content {
+        width: 94%;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .log-bl-content .small-title {
+        text-align: left;
+    }
+
+    .log-list {
+        font-size: 18px;
+    }
+
+    textarea {
+        width: 84%;
+    }
+
+    .account-info p {
+        font-size: 21px;
+    }
+
+    .account-image img {
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    .bl-icon-yellow {
+        top: -36px;
+        right: -39px;
+    }
+}
+
+
+@media screen and (min-width: 690px) {
+    .menu-content {
+        justify-content: space-between;
+    }
+
+    .menu-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .reg-measure, .reg-measure-2 {
+        display: block;
+    }
+
+    .match-bl {
+        display: flex;
+        flex-direction: unset;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .game-container canvas {
+        margin: 0 auto;
+        width: auto;
+    }
+
+    .instruction-content {
+        width: 60%;
+    }
+
+    .res-btn p {
+        font-size: inherit;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1300px) {
+    header {
+        height: 140px;
+    }
+
+        header h1 {
+            font-size: 100px;
+        }
+
+    .reg-measure, .reg-measure-2 {
+        display: block;
+    }
+
+    .reg-btn {
+        width: 200px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .register {
+        height: 80px;
+    }
+
+    .options-content {
+        flex-direction: unset;
+    }
+
+    .bl-btn {
+        width: 32%;
+    }
+
+    html, body {
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    body {
+        position: relative
+    }
+
+    footer {
+        position: inherit;
+    }
+
+    .menu-content {
+        justify-content: space-between;
+    }
+
+    .instruction-content {
+        width: 50%;
+    }
+
+
+
+    .game-container canvas {
+        margin: 0 auto;
+        width: auto;
+    }
+
+    .end-content {
+        width: 34%;
+    }
+
+        .end-content .reg-btn {
+            font-size: 20px;
+        }
+
+    .regSection {
+        margin-bottom: 0px;
+    }
+
+    .regSection-content {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .register-field {
+        padding-left: 50px;
+    }
+
+        .register-field input[type="text"],
+        .register-field input[type="password"] {
+            width: 50%;
+            height: 30px;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 20px;
+            color: #3d3d3d
+        }
+
+    .fixed-footer {
+        position: fixed;
+    }
+
+    .hidden-right {
+        display: unset;
+    }
+
+    .match-tiltle {
+        font-size: 40px;
+    }
+
+    .match-bl {
+        width: 80%;
+        display: flex;
+        flex-direction: unset;
+    }
+
+    .match-bl-right {
+        justify-content: flex-end;
+    }
+
+        .match-bl-right > *, .match-bl-left > * {
+            padding: 0px 25px 0px 25px;
+        }
+
+    .small-title {
+        margin-top: 0px;
+        font-size: 28px;
+    }
+
+    .history-btn-content {
+        margin-bottom: 0px;
+    }
+
+    .desc-bl-content {
+        width: 70%;
+    }
+
+    .text {
+        font-size: inherit;
+    }
+
+    .log-bl-content .small-title {
+        text-align: inherit;
+    }
+
+    .log-list {
+        font-size: inherit;
+    }
+
+    textarea {
+        width: 50%;
+    }
+
+    .account-info p {
+        font-size: 32px;
+    }
+
+    .account-image img {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
+
+    .menu-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .index-footer {
+        position: fixed;
+    }
+
+
+
+
+
+
+
+
+    .bl-icon-yellow {
+        top: -30px;
+        right: -25px;
+    }
+}
+
+
+@media screen and (min-width: 2000px) {
+
+
+    .instruction-content {
+        width: 40%;
+    }
+
+    .end-content {
+        width: 20%;
+    }
+}
+
+@media screen and (min-height: 880px) {
+    .review-footer {
+        position: fixed;
+    }
+}
+
+@media screen and (min-height: 940px) {
+    .history-footer {
+        position: fixed;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+    .register-footer {
+        position: fixed;
+    }
+}
+
+@media screen and (min-height: 1050px) {
+    .leaderboard-footer {
+        position: fixed;
+    }
+}
+
+@media screen and (min-height: 1050px) and (max-width: 690px) {
+    .leaderboard-footer {
+        position: static;
+    }
+}

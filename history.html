@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html en>
+<head>
+    <meta charset="utf-8">
+    <title>Snake Game</title>
+    <link rel="icon" href="./icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="description(not required)">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSNZPC8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <header>
+        <div class="content">
+            <div class="logo-text">
+                <h1>Snake Game</h1>
+            </div>
+
+
+        </div>
+    </header>
+    <div class="register">
+        <div class="menu-content">
+            <div class="menu-box box-left">
+                <a href="index.html">
+                    <div class="reg-btn ">
+                        <p>Назад</p>
+                    </div>
+                </a>
+
+                <a href="" id="supportSrc">
+                    <div class="account-btn reg-btn-orange" id="support">
+                        <img width="40" id="supportImg" src="./img/patreon.png" />
+                        <p>Підтримати</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="menu-box box-right hidden-right" id="no-account">
+                <div class="reg-measure"></div>
+
+                <a href="register.html">
+                    <div class="reg-btn ">
+                        <p>Реєстрація</p>
+                    </div>
+                </a>
+                <a href="login.html">
+                    <div class="reg-btn">
+                        <p>Вхід</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-box box-right account hidden-right" id="account">
+                <div class="reg-measure"></div>
+                <div class="account-image">
+                    <img width="60" id="accountImg" src="./img/icon0.png" />
+                </div>
+                <div class="account-info">
+                    <p id="accountName">No name</p>
+                </div>
+                <div class="account-btn" id="accountExit">
+                    <p>Вихід</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="history-bl leader-bl">
+        <div class="history-bl-content leader-bl-content">
+            <div class="match-bl title" id="reality1">
+                <div class="match-name">
+                    <p class=" match-tiltle" id="matchName1"></p>
+                </div>
+                <div class="match-bl-right">
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="date1"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="result1"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="version1"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="match-bl title" id="reality2" >
+                <div class="match-name">
+                    <p class=" match-tiltle" id="matchName2"></p>
+                </div>
+                <div class="match-bl-right">
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="date2"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="result2"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="version2"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="match-bl title" id="reality3">
+                <div class="match-name">
+                    <p class=" match-tiltle" id="matchName3"></p>
+                </div>
+                <div class="match-bl-right">
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="date3"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="result3"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="version3"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="match-bl title" id="reality4">
+                <div class="match-name">
+                    <p class=" match-tiltle" id="matchName4"></p>
+                </div>
+                <div class="match-bl-right">
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="date4"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="result4"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="version4"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="match-bl title" id="reality5">
+                <div class="match-name">
+                    <p class=" match-tiltle" id="matchName5"></p>
+                </div>
+                <div class="match-bl-right">
+                    <div class="reg-measure-2"></div>
+                    <div class="match-date ">
+                        <p>Дата</p>
+                        <p class="small-title" id="date5"></p>
+                    </div>
+                    <div class="match-result ">
+                        <p>Результат</p>
+                        <p class="small-title" id="result5"></p>
+                    </div>
+                    <div class="match-version">
+                        <p>Версія</p>
+                        <p class="small-title" id="version5"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="history-btn">
+        <div class="history-btn-content">
+            <div class="reg-btn" id="btn-back">
+                <p>Назад</p>
+            </div>
+            <div class="reg-btn" id="btn-forw">
+                <p>Вперед</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="history-footer">
+        <div class="register-content ">
+
+            <div class="reg-box reg-box-right">
+                <div class="version">
+                    <p id="appVersion"></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--script section-->
+    <script type="text/javascript" async="" src="./js/history.js"></script>
+    <script type="text/javascript" async="" src="./js/account.js"></script>
+    <script type="text/javascript" async="" src="./js/version.js"></script>
+    <script type="text/javascript" async="" src="./js/random.js"></script>
+</body>
+</html>
+

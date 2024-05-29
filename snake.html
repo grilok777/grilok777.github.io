@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html en>
+<head>
+    <meta charset="utf-8">
+    <title>Snake Game</title>
+    <link rel="icon" href="./icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="description(not required)">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+    <link rel="stylesheet" href="./css/changeDesktopSnake.css">
+    <!--Vetal add)-->
+    <link rel="stylesheet" href="./css/styleSnake.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body id="bg">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSNZPC8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <header>
+        <div class="content">
+            <div class="logo-text">
+                <h1>Snake Game</h1>
+            </div>
+
+
+        </div>
+    </header>
+    <div class="menu register">
+        <div class="menu-content">
+            <div class="menu-box box-left">
+                <a href="index.html">
+                    <div class="reg-btn ">
+                        <p>Назад</p>
+                    </div>
+                </a>
+                <div class="reg-btn " id="instructionBtn">
+                    <p>Інструкція</p>
+                </div>
+                <a href="" id="supportSrc">
+                    <div class="account-btn reg-btn-orange" id="support">
+                        <img width="40" id="supportImg" src="./img/patreon.png" />
+                        <p>Підтримати</p>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-box box-right" id="no-account">
+
+                <div class="reg-measure"></div>
+
+                <a href="register.html">
+                    <div class="reg-btn ">
+                        <p>Реєстрація</p>
+                    </div>
+                </a>
+                <div class="reg-btn">
+                    <p>Вхід</p>
+                </div>
+
+            </div>
+            <div class="menu-box box-right account" id="account">
+                <div class="reg-measure"></div>
+                <div class="account-image">
+                    <img width="60" id="accountImg" src="./img/icon0.png" />
+                </div>
+                <div class="account-info">
+                    <p id="accountName">No name</p>
+                </div>
+                <div class="account-btn" id="accountExit">
+                    <p>Вихід</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="instruction" id="instructionText">
+        <div class="instruction-content">
+            <div class="desc-text">
+                <div class="snake-exit-btn" id="crossBtnSnake">
+                    <img src="./img/cross.png" width="30" />
+                </div>
+                <p class="title">Інструкція</p>
+                <p>Вітаємо в культовій грі "Змійка"! Ти граєш за голодну змійку, яка поїдає фрукти і від цього росте. Тобі слід уникати зустрічі з краєм газону та своїм хвостом). Їж і рости, щоб стати великою змійкою. Удачі!!!</p>
+                <div class="instruction-list">
+                    <strong>Правила</strong>
+                    <ul>
+                        <li>1)Кожен фрукт дає 1 бал</li>
+                        <li>2)Кожен фрукт збільшує тулуб на 1</li>
+                        <li>3)Зіткнення з краєм поля ЗАВЕРШИТЬ ГРУ</li>
+                        <li>4)Зіткнення з власним тілом ЗАВЕРШИТЬ ГРУ</li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="instruction InstOn" id="customWindow">
+        <div class="instruction-content custom-content">
+            <div class="desc-text">
+
+                <div class="snake-exit-btn" id="crossBtnSnake2">
+                    <img src="./img/cross.png" width="30" />
+                </div>
+                <p class="title">Кастомізація</p>
+                <p class="subtitle">Колір змійки</p>
+                <div class="custom-box">
+                    <div class="account-btn account-btn-start btn-rev custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="buttonLeft1">
+                        <img width="17" src="./img/play.png" />
+                    </div>
+                    <div class="color-box custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="colorBox">
+
+                    </div>
+
+                    <div class="account-btn account-btn-start custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="buttonRight1">
+                        <img width="17" src="./img/play.png" />
+                    </div>
+
+                </div>
+                <p class="subtitle">Їжа</p>
+                <div class="custom-box">
+                    <div class="account-btn account-btn-start btn-rev custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="buttonLeft2">
+                        <img width="17" src="./img/play.png" />
+                    </div>
+                    <div class="food-img custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)">
+                        <img width="40" id="foodBox" src="./img/food3.png" />
+                    </div>
+
+                    <div class="account-btn account-btn-start custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="buttonRight2">
+                        <img width="17" src="./img/play.png" />
+                    </div>
+
+                </div>
+
+                <p class="subtitle">Супер-Їжа</p>
+                <div class="custom-box">
+                    <div class="account-btn account-btn-start btn-rev custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="buttonLeft3">
+                        <img width="17" src="./img/play.png" />
+                    </div>
+                    <div class="food-img custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)">
+                        <img width="40" id="foodSBox" src="./img/foodS.png" />
+                    </div>
+
+                    <div class="account-btn account-btn-start custom-box-item" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="buttonRight3">
+                        <img width="17" src="./img/play.png" />
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="instruction" id="exitWindow">
+        <div class="instruction-content end-content">
+            <div class="desc-text">
+                <p class="title">Кінець гри</p>
+                <p id="finalScore"></p>
+                <div class="two-btn-box">
+                    <div class="reg-btn" id="restart">
+                        <p>Запустити заново</p>
+                    </div>
+                    <a href="index.html">
+                        <div id="mainMenu" class="reg-btn">
+                            <p>Головне меню</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="add" id="addBlock">
+        <div class="add-content">
+
+            <div class="add-block">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="game-container">
+        <canvas id="game" width="608" height="608"></canvas>
+
+    </div>
+    <div class="game-container">
+        <div class="button-container">
+
+            <div class="account-btn account-btn-pause" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="button-pause">
+                <p id="pauseText">||</p>
+                <img width="17" src="./img/play.png" id="pauseImg" />
+            </div>
+            <div class="account-btn account-btn-start" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="button-start">
+                <img width="17" src="./img/play.png" />
+            </div>
+
+            <div class="account-btn account-btn-custom" onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" id="button-custom">
+                <p id="pauseText">Кастомізувати</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="register-content ">
+
+            <div class="reg-box reg-box-right">
+                <div class="version">
+                    <p id="appVersion"></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!--script section-->
+
+    <script src="./js/gameSnake.js"></script>
+
+    <script type="text/javascript" async="" src="./js/snake.js"></script>
+
+    <script type="text/javascript" async="" src="./js/account.js"></script>
+    <script type="text/javascript" async="" src="./js/version.js"></script>
+    <script type="text/javascript" async="" src="./js/random.js"></script>
+</body>
+</html>
+

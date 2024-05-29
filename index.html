@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html en>
+<head>
+    <meta charset="utf-8">
+    <title>Snake Game</title>
+    <link rel="icon" href="./icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="description(not required)">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSNZPC8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <header>
+        <div class="content">
+            <div class="logo-text">
+                <h1>Snake Game</h1>
+            </div>
+
+
+        </div>
+    </header>
+    <div class="register">
+        <div class="menu-content">
+            <div class="menu-box box-left">
+                <a href="" id="supportSrc">
+                    <div class="account-btn reg-btn-orange" id="support">
+                        <img width="40" id="supportImg" src="./img/patreon.png" />
+                        <p>Підтримати</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-box box-right" id="no-account">
+                <div class="reg-measure"></div>
+                <!--main styles-->
+                <a href="register.html">
+                    <div class="reg-btn ">
+                        <p>Реєстрація</p>
+                    </div>
+                </a>
+                <a href="login.html">
+                    <div class="reg-btn">
+                        <p>Вхід</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-box box-right account" id="account">
+                <div class="reg-measure"></div>
+                <div class="account-image account-active" id="instructionImg">
+                    <img width="60" id="accountImg" src="./img/icon0.png" />
+                </div>
+                <div class="account-info account-active" id="instructionBtn">
+                    <p id="accountName">No name</p>
+                </div>
+                <div class="account-btn" id="accountExit">
+                    <p>Вихід</p>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="add" id="addBlock">
+        <div class="add-content">
+            <div class="add-block">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="instruction instruction-index" id="instructionText">
+        <div class="instruction-content">
+            <div class="desc-text">
+                <div class="snake-exit-btn" id="crossBtnSnake">
+                    <img src="./img/cross.png" width="30" />
+                </div>
+                <p class="title">Статистика</p>
+                <div class="stat-box">
+                    <p class="stat-box-left">Нік:</p>
+                    <p class="stat-box-right" id="statName">0</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-box-left">Електрона пошта:</p>
+                    <div class="stat-box-right">
+                        <p class="stat-email" id="statEmail">0</p>
+                    </div>
+
+                </div>
+                <div class="stat-box">
+                    <p class="stat-box-left">Рекорд:</p>
+                    <p class="stat-box-right" id="statRecord">0</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-box-left">Зіграно матчів:</p>
+                    <div class="stat-box-right">
+                        <p id="statMatch">0</p>
+                    </div>
+
+                </div>
+                <div class="stat-box">
+                    <p class="stat-box-left">Яблук зібрано:</p>
+                    <p class="stat-box-right" id="statApple">0</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-box-left">Дата реєстрації:</p>
+                    <div class="stat-box-right">
+                        <p class="stat-date" id="statReg">0</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="options">
+        <div class="options-content">
+
+            <div onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" class="bl-btn" id="bl-1">
+                <a href="snake.html">
+                    <div class="bl-btn-icon">
+                        <img width="125" src="./img/controller.png" />
+                    </div>
+                    <div class="bl-btn-desc bl-btn-play">
+                        <p class="title">Почати нову гру!</p>
+                        <p>Змійка - це досить проста, але захоплююча гра. Відчуйте досвід гри лише в один клік!<p>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" class="bl-btn" id="bl-2">
+                <a href="leaderBoard.html" id="accountLinkCheck">
+                    <div class="bl-btn-icon">
+                        <img width="125" src="./img/liderboard.png" />
+                    </div>
+                    <div class="bl-btn-desc bl-btn-play">
+                        <p class="title">Таблиця лідерів</p>
+                        <p>Хочеш відчути більше конкуренції? Тоді тут можна переглянути найкращі результати гравців за цей тиждень!<p>
+                    </div>
+                </a>
+            </div>
+            <div onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" class="bl-btn" id="bl-3">
+                <a href="history.html" id="accountLinkCheck2">
+                    <div class="bl-btn-icon">
+                        <img width="125" src="./img/history.png" />
+                    </div>
+                    <div class="bl-btn-desc bl-btn-play">
+                        <p class="title">Історія матчів</p>
+                        <p>Дізнайся про результати своїх ігор. Переглядай свої успіхи та невдачі. Не забуть похвалитись друзям!<p>
+                    </div>
+                </a>
+            </div>
+            <div onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" class="bl-btn" id="bl-4">
+                <a href="versionLog.html">
+                    <div class="bl-btn-icon">
+                        <img width="125" src="./img/update.png" />
+                    </div>
+                    <div class="bl-btn-desc bl-btn-play">
+                        <p class="title">Історія оновлень</p>
+                        <p>Тут можна переглянути ввесь список змін. Також тут можна відслідкувати розвиток проекту!<p>
+                    </div>
+                </a>
+            </div>
+            <div onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" class="bl-btn" id="bl-5">
+                <a href="description.html">
+                    <div class="bl-btn-icon">
+                        <img width="125" src="./img/question.png" />
+                    </div>
+                    <div class="bl-btn-desc bl-btn-play">
+                        <p class="title">Опис гри</p>
+                        <p>Тут можна дізнатися основну інформацію про проект.<p>
+                    </div>
+                </a>
+            </div>
+            <div onmouseover="outlineOn(this)" ontouchstart="touchOn(this)" onmouseout="outlineOff(this)" ontouchend="touchOff(this)" class="bl-btn" id="bl-6">
+                <a href="review.html">
+                    <div class="bl-btn-icon">
+                        <img width="125" src="./img/dev.png" />
+                    </div>
+                    <div class="bl-btn-desc bl-btn-play">
+                        <p class="title">Написати відгук</p>
+                        <p>Тут можна повідомити розробників про проблеми із застосунком.<p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <footer class="index-footer">
+        <div class="register-content">
+
+            <div class="reg-box reg-box-right">
+                <div class="version">
+                    <p id="appVersion"></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!--script section-->
+    <script type="text/javascript" async="" src="./js/statistic.js"></script>
+    <script type="text/javascript" async="" src="./js/program-d.js"></script>
+    <script type="text/javascript" async="" src="./js/account.js"></script>
+    <script type="text/javascript" async="" src="./js/version.js"></script>
+    <script type="text/javascript" async="" src="./js/random.js"></script>
+</body>
+</html>
+

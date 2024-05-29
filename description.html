@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html en>
+<head>
+    <meta charset="utf-8">
+    <title>Snake Game</title>
+    <link rel="icon" href="./icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="description(not required)">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/desktop.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQSNZPC8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <header>
+        <div class="content">
+            <div class="logo-text">
+                <h1>Snake Game</h1>
+            </div>
+
+
+        </div>
+    </header>
+    <div class="register">
+        <div class="menu-content">
+            <div class="menu-box box-left">
+                <a href="index.html">
+                    <div class="reg-btn ">
+                        <p>Назад</p>
+                    </div>
+                </a>
+                <a href="" id="supportSrc">
+                    <div class="account-btn reg-btn-orange" id="support">
+                        <img width="40" id="supportImg" src="./img/patreon.png" />
+                        <p>Підтримати</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-box box-right hidden-right" id="no-account">
+                <div class="reg-measure"></div>
+
+                <a href="register.html">
+                    <div class="reg-btn ">
+                        <p>Реєстрація</p>
+                    </div>
+                </a>
+                <a href="login.html">
+                    <div class="reg-btn">
+                        <p>Вхід</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-box box-right account hidden-right" id="account">
+                <div class="reg-measure"></div>
+                <div class="account-image">
+                    <img width="60" id="accountImg" src="./img/icon0.png" />
+                </div>
+                <div class="account-info">
+                    <p id="accountName">No name</p>
+                </div>
+                <div class="account-btn" id="accountExit">
+                    <p>Вихід</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="add" id="addBlock">
+        <div class="add-content">
+
+            <div class="add-block">
+
+            </div>
+
+        </div>
+    </div>
+    <div class="desc-bl">
+        <div class="desc-bl-content desc-text">
+            <p class="small-title">Опис</p>
+            <p class="text">Змійка (Snake Game) — це жанр відеоігор, де гравець керує лінією, яка постійно довшає і врешті стає основною перешкодою для самої себе. Концепція виникла 1976 року в аркадній грі для двох гравців Blockade від Gremlin Industries. Простота реалізації привела до появи сотень версій (деякі з яких мають у назві слово «змія» або «черв'як») для багатьох платформ. Аркадна гра Tron 1982 року, заснована на фільмі, включає ігровий процес про змію для одного користувача Light Cycles. Після того, як варіант з'явився на мобільних телефонах Nokia 1998 року, інтерес до цього типу ігор відродився, оскільки він знайшов більшу аудиторію. Тільки для iOS існує кілька сотень таких ігор.</p>
+            <p class="small-title">Ігровий процес</p>
+            <p class="text">Гравець керує точкою, квадратом або об'єктом на площині з чіткими межами. Рухаючися, він залишає слід, схожий на рухому змію. У деяких іграх кінець сліду знаходиться у фіксованому положенні, тому змія постійно стає довшою, коли рухається. В іншій схемі змія має певну довжину, тому хвіст рухається на фіксовану кількість одиниць від голови. Гравець програє, коли змія наткнеться на межу екрана, іншу перешкоду або саму себе.</p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="fixed-footer">
+        <div class="register-content ">
+
+            <div class="reg-box reg-box-right">
+                <div class="version">
+                    <p id="appVersion"></p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!--script section-->
+
+    <script type="text/javascript" async="" src="./js/account.js"></script>
+    <script type="text/javascript" async="" src="./js/version.js"></script>
+    <script type="text/javascript" async="" src="./js/random.js"></script>
+</body>
+</html>
+
+
+
+
+
