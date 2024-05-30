@@ -195,8 +195,18 @@
         width: 88%;
         height: 80px;
     }
+    .footer-desc{
+        position:static;
+    }
 
 }
+
+@media screen and (min-width: 440px) {
+    .footer-desc {
+        position: fixed;
+    }
+}
+
 
 @media screen and (min-width: 450px) {
 
@@ -279,6 +289,9 @@
     }
     .reg-btn-orange {
         display: flex;
+    }
+    .snake-footer {
+        position: fixed;
     }
 
 }
@@ -584,11 +597,17 @@
     .leaderboard-footer {
         position: static;
     }
+    .snake-footer {
+        position: static;
+    }
 }
 
 @media screen and (min-width: 690px) and (max-height:999px) {
     .leaderboard-footer {
         position: static;
+    }
+    .snake-footer {
+        position: fixed;
     }
 }
 
@@ -605,9 +624,68 @@
 }
 
 
+@media screen and (min-width: 350px) and (max-height: 836px) {
+    .snake-footer {
+        position: static;
+    }
+}
 
 
+@media screen and (min-width: 350px) and (min-height: 837px) {
+    .snake-footer {
+        position: fixed;
+    }
+}
+
+@media screen and (min-width: 460px) and (max-width: 690px) and (max-height: 830px) {
+    .snake-footer {
+        position: static;
+    }
+}
 
 
+@media screen and (min-width: 540px) and (max-width: 690px) and (max-height: 916px) {
+    .snake-footer {
+        position: static;
+    }
+}
 
+@media screen and (min-width: 560px) and (max-width: 690px) and (max-height: 966px) {
+    .snake-footer {
+        position: static;
+    }
+}
 
+@media screen and (min-width: 610px) and (max-width: 690px) and (max-height: 1000px) {
+    .snake-footer {
+        position: static;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 690px) and (max-height: 1015px) {
+    .snake-footer {
+        position: static;
+    }
+}
+
+@media screen and (min-width: 670px) and (max-width: 690px) and (max-height: 1030px) {
+    .snake-footer {
+        position: static;
+    }
+}
+@media screen and (min-width: 680px) and (max-width: 690px) and (max-height: 1040px) {
+    .snake-footer {
+        position: static;
+    }
+}
+@media screen and (min-width: 690px) and (max-height: 985px) {
+    .snake-footer {
+        position: static;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-height: 1045px) {
+    .snake-footer {
+        position: static;
+    }
+}
